@@ -3,38 +3,47 @@ import Key from "../Key/Key"
 import { useEffect, useState } from 'react';
 
 const Piano = () => {
-  const [pressedKey, setPressedKey] = useState<string | null>(null);
+  const [pressedKeyboardKey, setPressedKeyboardKey] = useState<string | null>(null);
   const [event, setEvent] = useState<KeyboardEvent | null>(null);
-  const [currentTarget, setCurrentTarget ] = useState<MouseEvent | null>(null)
+  const [pressedMouseTarget, setPressedMouseTarget] = useState<MouseEvent | null>(null);
+  const [playAllowed, setPlayAllowed] = useState(true);
 
   //https://bobbyhadz.com/blog/react-detect-enter-key-press
-
+  
   useEffect(() => {
     const keyDownHandler = (event: KeyboardEvent) => {
-      setPressedKey(event.key);
+      setPressedKeyboardKey(event.key);
       setEvent(event)
-      handleClick(event)
-     
+      if (playAllowed) {
+        handleClick(event)
+      }
     };
+    
+    const keyUpHandler = () => {
+      setPlayAllowed(true)
+      setPressedKeyboardKey(null)
+      setPressedMouseTarget(null)
+    }
     document.addEventListener('keydown', keyDownHandler);
+    document.addEventListener('keyup', keyUpHandler)
 
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
+      document.removeEventListener('keyup', keyUpHandler);
     };
-  }, []);
+  }, [playAllowed]);
 
 
-  const handleClick = (event:any) => {
+  const handleClick = (event: any) => {
     const key = 'key' in event ? event.key : event.currentTarget.value;
-    setCurrentTarget(event.currentTarget.value)
+    setPressedMouseTarget(event.currentTarget.value)
     const audio = new Audio(`../../public/sounds/${key}.mp3`)
     audio.play()
+    setPlayAllowed(false)
   }
 
   return (
-    <>
-      < Key notes={notes} event={event} clickHandler={handleClick} pressedKey={pressedKey} currentTarget={currentTarget}/>
-    </>
+      < Key notes={notes} event={event} clickHandler={handleClick} pressedKeyboardKey={pressedKeyboardKey} pressedMouseTarget={pressedMouseTarget} />
   )
 }
 

@@ -1,0 +1,72 @@
+.key {
+  background-color: white;
+  height: 300px;
+  width: 60px;
+  border: 2px solid #474747;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.keyText{
+  position: absolute;
+  color:#474747;
+  font-weight: 600;
+  font-size: 30px;
+  padding-top:240px;
+  pointer-events: none;
+}
+
+.blackButton {
+  width: 40px;
+  height: 130px;
+  background: black;
+  border: solid black 1px;
+  position: absolute;
+  margin: 1px;
+  margin-left: -20px;
+  z-index: 2;
+  cursor: pointer;
+}
+.blackButton:active {
+  background: #333;
+}
+
+.whiteButton {
+  width: 60px;
+  height: 200px;
+  background: white;
+  border: solid black 1px;
+  box-shadow: 2px 5px;
+  margin: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.whiteButton:active {
+  background-image: url('../../assets/cat.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-y: 130px;
+}
+
+.textDown {
+  display: flex;
+  justify-content: center;
+  padding-top: 160px;
+}
+
+.textUp {
+  color: white;
+  padding-top: 90px;
+}
+
+.active {
+  background-image: url('../../assets/cat.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-y: 130px;
+}
