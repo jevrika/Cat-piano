@@ -1,0 +1,39 @@
+.blackButton {
+  width: 40px;
+  height: 130px;
+  background: black;
+  border: solid black 1px;
+  position: absolute;
+  margin: 1px;
+  margin-left: -20px;
+}
+.blackButton:active {
+  background: #333;
+}
+.whiteButton {
+  width: 60px;
+  height: 200px;
+  background: white;
+  border: solid black 1px;
+  box-shadow: 2px 5px;
+  margin: 1px;
+  margin-left: '-20px';
+  box-sizing: border-box;
+}
+
+.whiteButton:active {
+  background-image: url('../assets/cat.png');
+  background-size: 100%;
+  background-position: center;
+}
+
+.textDown {
+  display: flex;
+  justify-content: center;
+  padding-top: 160px;
+}
+
+.textUp {
+  color: white;
+  padding-top: 90px;
+}

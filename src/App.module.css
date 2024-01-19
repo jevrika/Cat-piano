@@ -1,0 +1,14 @@
+section {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url('./assets/background.jpg');
+  backdrop-filter: blur(7px);
+  
+
+}

@@ -1,0 +1,10 @@
+body {
+  background-color: transparent;
+  margin: 0 auto;
+}
+
+.test:focus{
+  background-image: url('../assets/cat.png');
+  background-size: 100%;
+  background-position: center;
+}

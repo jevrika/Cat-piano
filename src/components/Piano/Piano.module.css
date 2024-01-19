@@ -1,0 +1,20 @@
+.piano {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.test {
+  color: red;
+}
+
+.cat {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+
+.active:focus{
+  color: red;
+}
