@@ -31,6 +31,8 @@
   position: absolute;
   margin: 1px;
   margin-left: -20px;
+  z-index: 2;
+  cursor: pointer;
 }
 .blackButton:active {
   background: #333;
@@ -43,20 +45,16 @@
   box-shadow: 2px 5px;
   margin: 1px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .whiteButton:active {
   background-image: url('../../assets/cat.png');
   background-size: 100%;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-y: 130px;
 }
-
-.whiteButton:focus {
-  background-image: url('../../assets/cat.png');
-  background-size: 100%;
-  background-position: center;
-}
-
 
 .textDown {
   display: flex;
@@ -88,6 +86,7 @@
   left: -10px;
   width: 170px;
   top: -109px;
+
 }
 
 .hiddenCat2{
@@ -107,11 +106,12 @@
 }
 
 .visibleCat4{
-  z-index: 0;
+  transform: rotate(10deg);
+  z-index: -1;
   position: absolute;
   left: 120px;
-  width: 100px;
-  top: 481px;
+  width: 210px;
+  top: -125px;
 }
 
 .hiddenCat4{
@@ -119,11 +119,11 @@
 }
 
 .visibleCat5{
-  z-index: 0;
+  z-index: 1;
   position: absolute;
-  left: 120px;
-  width: 100px;
-  top: 481px;
+  left: 144px;
+  width: 271px;
+  top: -49px;
 }
 
 .hiddenCat5{
@@ -131,14 +131,99 @@
 }
 
 .visibleCat6{
-  z-index: 0;
+  z-index: -1;
+  transform: rotate(180deg);
   position: absolute;
-  left: 120px;
-  width: 100px;
-  top: 481px;
+  left: 140px;
+  width: 230px;
+  top: 163px;
 }
 
 .hiddenCat6{
   display: none;
 }
 
+.visibleCat7{
+  z-index: -1;
+  transform: rotate(160deg);
+  position: absolute;
+  left: 269px;
+  width: 230px;
+  top: 143px;
+}
+
+.hiddenCat7{
+  display: none;
+}
+
+.visibleCat8{
+  z-index: -1;
+  position: absolute;
+  left: 210px;
+  width: 230px;
+  top: -217px;
+}
+
+.hiddenCat8{
+  display: none;
+}
+
+
+.visibleCat9{
+  z-index: 0;
+  position: absolute;
+  left: 266px;
+  width: 212px;
+  top: -15px;
+}
+
+.hiddenCat9{
+  display: none;
+}
+
+.visibleCat10{
+  z-index: -1;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 70px;
+  width: 230px;
+  top: 163px;
+}
+
+.hiddenCat10{
+  display: none;
+}
+
+.visibleCat11{
+  z-index: -1;
+  transform: rotate(10deg);
+  position: absolute;
+  left: 250px;
+  width: 230px;
+  top: -177px;
+}
+
+.hiddenCat11{
+  display: none;
+}
+
+.visibleCat12{
+  z-index: -1;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 410px;
+  width: 230px;
+  top: 13px;
+}
+
+.hiddenCat12{
+  display: none;
+}
+
+.active {
+  background-image: url('../../assets/cat.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-y: 130px;
+}

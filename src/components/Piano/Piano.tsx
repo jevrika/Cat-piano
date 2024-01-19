@@ -4,40 +4,36 @@ import { useEffect, useState } from 'react';
 
 const Piano = () => {
   const [pressedKey, setPressedKey] = useState<string | null>(null);
-  const [pressedKeyFromKeyboard, setPressedKeyFromKeyboard] = useState<string | null>(null);
+  const [event, setEvent] = useState<KeyboardEvent | null>(null);
+  const [currentTarget, setCurrentTarget ] = useState<MouseEvent | null>(null)
+
   //https://bobbyhadz.com/blog/react-detect-enter-key-press
 
   useEffect(() => {
     const keyDownHandler = (event: KeyboardEvent) => {
-      setPressedKeyFromKeyboard(event.key);
       setPressedKey(event.key);
+      setEvent(event)
       handleClick(event)
      
     };
-
-    const keyUpHandler = () => {
-      setPressedKey(null);
-    }
     document.addEventListener('keydown', keyDownHandler);
-    document.addEventListener('keyup', keyUpHandler);
 
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
-      document.removeEventListener('keyup', keyUpHandler);
     };
   }, []);
 
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleClick = (event: any) => {
+  const handleClick = (event:any) => {
     const key = 'key' in event ? event.key : event.currentTarget.value;
-    const audio = new Audio(`../../public/sounds/${key}.wav`)
+    setCurrentTarget(event.currentTarget.value)
+    const audio = new Audio(`../../public/sounds/${key}.mp3`)
     audio.play()
   }
 
   return (
     <>
-      < Key notes={notes} clickHandler={handleClick} pressedKey={pressedKey} pressedKeyFromKeyboard={pressedKeyFromKeyboard}/>
+      < Key notes={notes} event={event} clickHandler={handleClick} pressedKey={pressedKey} currentTarget={currentTarget}/>
     </>
   )
 }
