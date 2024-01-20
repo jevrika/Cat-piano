@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import styles from '../Button/Button.module.css'
 import { NoteType } from "../../NOTES";
 

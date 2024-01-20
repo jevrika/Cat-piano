@@ -2,10 +2,9 @@
   z-index: -1;
   transform: rotate(-60deg);
   position: absolute;
-  left: -80px;
+  left: -90px;
   width: 120px;
 }
-
 
 .hiddenCat1 {
   display: none;
@@ -15,9 +14,8 @@
   z-index: -1;
   position: absolute;
   left: -10px;
-  width: 170px;
-  top: -109px;
-
+  width: 210px;
+  top: -149px;
 }
 
 .hiddenCat2{
@@ -28,8 +26,8 @@
   z-index: -1;
   position: absolute;
   left: 120px;
-  width: 150px;
-  top: -109px;
+  width: 170px;
+  top: -139px;
 }
 
 .hiddenCat3{
@@ -41,8 +39,8 @@
   z-index: -1;
   position: absolute;
   left: 120px;
-  width: 210px;
-  top: -125px;
+  width: 260px;
+  top: -155px;
 }
 
 .hiddenCat4{
@@ -52,7 +50,7 @@
 .visibleCat5{
   z-index: 1;
   position: absolute;
-  left: 144px;
+  left: 234px;
   width: 271px;
   top: -49px;
 }
@@ -67,7 +65,7 @@
   position: absolute;
   left: 140px;
   width: 230px;
-  top: 163px;
+  top: 213px;
 }
 
 .hiddenCat6{
@@ -76,11 +74,11 @@
 
 .visibleCat7{
   z-index: -1;
-  transform: rotate(160deg);
+  transform: rotate(180deg);
   position: absolute;
   left: 269px;
   width: 230px;
-  top: 143px;
+  top: 233px;
 }
 
 .hiddenCat7{
@@ -103,9 +101,9 @@
 .visibleCat9{
   z-index: 0;
   position: absolute;
-  left: 266px;
-  width: 212px;
-  top: -15px;
+  left: 575px;
+  width: 175px;
+  top: 74px;
 }
 
 .hiddenCat9{
@@ -116,9 +114,9 @@
   z-index: -1;
   transform: rotate(180deg);
   position: absolute;
-  left: 70px;
-  width: 230px;
-  top: 163px;
+  left: 466px;
+  width: 270px;
+  top: 214px;
 }
 
 .hiddenCat10{
@@ -129,9 +127,9 @@
   z-index: -1;
   transform: rotate(10deg);
   position: absolute;
-  left: 250px;
+  left: 530px;
   width: 230px;
-  top: -177px;
+  top: -197px;
 }
 
 .hiddenCat11{
@@ -142,9 +140,9 @@
   z-index: -1;
   transform: rotate(90deg);
   position: absolute;
-  left: 410px;
-  width: 230px;
-  top: 13px;
+  left: 700px;
+  width: 260px;
+  top: 23px;
 }
 
 .hiddenCat12{
